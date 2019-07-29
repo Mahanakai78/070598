@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            font-size: .8rem;
+            line-height: 18px;
+        }
+
+        .header {
+            background: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 2rem;
+            transition: .6s;
+        }
+
+        .row>.column {
+            float: left;
+            width: 33.3%;
+            text-align: center;
+            padding: 6px;
+            transition: .6s;
+        
+        }
+div#middle-col{
+   padding-bottom: 50px;
+   
+}
+
+        .row::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 8px;
+        }
+       
+        @media(max-width:768px) {
+            .header {
+                font-size: 1.8rem;
+            }
+
+            #left-col {
+                width: 40%;
+            }
+
+            #middle-col {
+                width: 60%;
+            }
+
+            #right-col {
+                width: 100%;
+            }
+
+            .footer {
+                font-size: 1.3rem;
+                padding: 20px;
+            }
+        }
+        @media(max-width:576px){
+            .column{
+                font-size:1.2rem;
+            }
+            #left-col, #middle-col, #right-col {
+                width: 100%;
+        
+            }
+            #left-col , #right-col{
+                display: none;
+            }
+#middle-col{
+    background: pink;
+    transition: .5s;
+  
+}
+#middle-col .pic{
+           opacity: .9;
+       }
+           
+
+        }
+       .column .pic{
+           opacity: .3;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Heder</h1>
+        </div>
+        <div class="row">
+            <div class="column" id="left-col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima pariatur a neque iure, sapiente
+                    nemo fuga vero earum ea quae, amet quos nobis, praesentium inventore officiis suscipit sit officia!
+                </p>
+            </div>
+            <div class="column" id="middle-col">
+            <img src="download.jpg" alt="oops" class="pic">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, fuga ut necessitatibus suscipit
+                    repellendus consectetur esse repudiandae, possimus eius veniam ducimus dignissimos adipisci culpa
+                    inventore sapiente laboriosam, itaque sed corporis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corporis repudiandae tempore rerum fuga, voluptatibus sint eaque, error sed molestias minus dignissimos cumque velit doloribus porro ab illum! Velit, necessitatibus?</p>
+            </div>
+            <div class="column" id="right-col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, nobis illo dolor quae minus illum
+                    earum consectetur unde corrupti possimus reprehenderit. Delectus sapiente ullam, perferendis quidem
+                    ex nam saepe corrupti!</p>
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+
+
+</body>
+
+</html>
